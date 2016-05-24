@@ -1,11 +1,10 @@
 
 var fs = require('fs')
   , join = require('path').join
-  , spawn = require('child_process').spawn
+  , spawn = require('npm-run').spawn
   , once = require('once')
   , devConfig = join(__dirname, 'dev.json')
   , prodConfig = join(__dirname, 'prod.json')
-  , postcssExec = join(__dirname, 'node_modules/.bin/postcss')
 ;
 
 module.exports = function (options, cb) {
@@ -21,7 +20,7 @@ module.exports = function (options, cb) {
     args.push('--input');
     args.push(options.input);
   }
-  var child = spawn(postcssExec, args, { stdio:  ['inherit', 'inherit', 'pipe'] })
+  var child = spawn('postcss', args, { stdio:  ['inherit', 'inherit', 'pipe'] })
     , end = once(cb)
     , error = null
   ;
