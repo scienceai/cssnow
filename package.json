@@ -1,6 +1,6 @@
 {
   "name": "cssnow",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Sort of like cssnext used to be",
   "main": "./index.js",
   "scripts": {
