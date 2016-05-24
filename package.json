@@ -4,7 +4,7 @@
   "description": "Sort of like cssnext used to be",
   "main": "./index.js",
   "scripts": {
-    "test": "node -c cli.js && node -c index.js"
+    "test": "mocha --reporter spec --bail"
   },
   "bin": {
     "cssnow": "./cli.js"
@@ -26,7 +26,10 @@
     "url": "https://github.com/scienceai/cssnow/issues"
   },
   "homepage": "https://github.com/scienceai/cssnow",
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "2.5.2",
+    "shortid": "2.2.6"
+  },
   "dependencies": {
     "commander": "2.9.0",
     "cssnano": "3.6.2",
