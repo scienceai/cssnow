@@ -46,3 +46,7 @@ You can use cssnow as a library. It exports a single function (the default one).
 * `output`: output path.
 
 The callback will receive an error if there was one, just `null` otherwise.
+
+## Global installation
+
+You may install it globally if you wish to (with `npm install -g cssnow`), it will just work.
