@@ -1,7 +1,7 @@
 
 # cssnow
 
-Sort of like [cssnext](http://cssnext.io/) used to be.
+A CSS pre-processor, really simple to set up, sort of like [cssnext](http://cssnext.io/) used to be.
 
 Back when we were young, cssnext used to be pretty simple: you installed it, you ran it, it worked.
 Nowadays, cssnext has evolved to build atop PostCSS, with lots of configuration coming with.
