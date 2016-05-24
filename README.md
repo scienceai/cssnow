@@ -1,7 +1,7 @@
 
-[![CircleCI](https://circleci.com/gh/scienceai/cssnow.svg?style=svg)](https://circleci.com/gh/scienceai/cssnow)
 
 # cssnow
+[![CircleCI](https://circleci.com/gh/scienceai/cssnow.svg?style=svg)](https://circleci.com/gh/scienceai/cssnow)
 
 A CSS pre-processor, really simple to set up, sort of like [cssnext](http://cssnext.io/) used to be.
 
