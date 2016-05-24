@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 
 var cssnow = require('.')
   , commander = require('commander')
