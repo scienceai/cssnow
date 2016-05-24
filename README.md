@@ -4,14 +4,17 @@
 Sort of like [cssnext](http://cssnext.io/) used to be.
 
 Back when we were young, cssnext used to be pretty simple: you installed it, you ran it, it worked.
-Nowadays, cssnext has evolved to build atop PostCSS.
+Nowadays, cssnext has evolved to build atop PostCSS, with lots of configuration coming with.
 
-I have nothing against that move. It's a lot more powerful and flexible. But we have lots of repos,
-and they all need a default that's pretty much what cssnext used to be. So what `cssnow` does is
-pretty much that: use cssnext and PostCSS with a default setup that matches the sane, basic setup
-we need. It's a whole lot fewer direct dependencies to worry about, and a way to centralise options
-better than the default (such as being safe out of the box instead of triggering hard-to-find
-`z-index` bugs).
+I have nothing against that move. It's a lot more powerful and flexible, and overall I think it is
+absolutely the right thing to do. But we have lots of repos, and they all need a default that's
+pretty much what cssnext used to be. So what `cssnow` does is pretty much that: use cssnext and
+PostCSS with a default setup that matches what we need. It's a whole lot fewer direct dependencies
+to worry about, and a way to centralise options we like (such as being safe out of the box when
+minifying).
+
+This is for you if you like these defaults and don't want to think too much about your CSS
+pre-processing; if you prefer the flexibility and power stick to the full PostCSS stack!
 
 ## Installation
 
