@@ -24,4 +24,5 @@ commander
       }
     );
   })
+  .parse(process.argv)
 ;
