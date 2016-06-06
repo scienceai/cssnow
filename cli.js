@@ -11,9 +11,10 @@ commander
   .action(function (input, output, options) {
     cssnow(
       {
-        watch:  options.watch,
-        input:  input,
-        output: output,
+        watch:    options.watch,
+        input:    input,
+        output:   output,
+        execDir:  __dirname,
       },
       function (err) {
         if (err) {
