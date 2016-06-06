@@ -4,6 +4,7 @@ var cssnow = require('.')
   , commander = require('commander')
 ;
 
+console.log('dirname', __dirname);
 commander
   .version(require('./package.json').version)
   .option('-w, --watch', 'Watch mode')

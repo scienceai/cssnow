@@ -20,10 +20,8 @@ function findPostCSSCli (execDir, cb) {
     candidates.push(join.apply(null, steps.concat(['node_modules/.bin'])));
     steps.pop();
   }
-  console.log('candidates', candidates);
   var testNext = function () {
     var nxt = candidates.shift();
-    console.log('trying', nxt);
     if (!nxt) {
       whereis('postcss', cb);
     }

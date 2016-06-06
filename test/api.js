@@ -4,6 +4,7 @@ var cssnow = require('..')
   , join = require('path').join
   , assert = require('assert')
   , shortid = require('shortid')
+  , binPath = join(__dirname, '../node_modules/.bin')
   , simpleCSS = join(__dirname, 'fixtures/simple.css')
   , brokenCSS = join(__dirname, 'fixtures/broken.css')
   , delFiles = []
@@ -12,7 +13,7 @@ var cssnow = require('..')
 function run (src, cb) {
   var file = join(__dirname, 'fixtures', shortid.generate());
   delFiles.push(file);
-  cssnow({ input: src, output: file }, function (err) {
+  cssnow({ input: src, output: file, execDir: binPath }, function (err) {
     if (err) return cb(err);
     cb(null, fs.existsSync(file) && fs.readFileSync(file, 'utf8'));
   })
