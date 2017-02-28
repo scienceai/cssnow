@@ -41,7 +41,7 @@ describe('API', function () {
       done();
     });
   });
-  it('does minifies in production', function (done) {
+  it('minifies in production', function (done) {
     process.env.NODE_ENV = 'production';
     run(simpleCSS, function (err, out) {
       assert.ifError(err);
@@ -56,5 +56,13 @@ describe('API', function () {
       assert(out.match(/80/), 'z-index wasn\'t killed');
       done();
     });
+  });
+  it('exports configurations', function () {
+    assert(cssnow.development, 'exports development');
+    assert(cssnow.production, 'exports production');
+    assert(cssnow.configuration, 'exports resolved');
+    assert(cssnow.development.map, 'correct development');
+    assert(cssnow.production['no-map'], 'correct production');
+    assert.deepEqual(cssnow.development, cssnow.configuration, 'right resolved');
   });
 });

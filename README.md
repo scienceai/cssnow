@@ -49,6 +49,10 @@ You can use cssnow as a library. It exports a single function (the default one).
 
 The callback will receive an error if there was one, just `null` otherwise.
 
+It also has a few named exports: `production`, `development`, and `configuration` which are all the
+configuration objects for the respective environments plus the resolved one — these can be used with
+external tools that support a PostCSS configuration, such as webpack.
+
 ## Global installation
 
 You may install it globally if you wish to (with `npm install -g cssnow`), it will just work.

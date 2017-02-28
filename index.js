@@ -7,6 +7,8 @@ var fs = require('fs')
   , once = require('once')
   , devConfig = join(__dirname, 'dev.json')
   , prodConfig = join(__dirname, 'prod.json')
+  , dev = JSON.parse(fs.readFileSync(devConfig))
+  , prod = JSON.parse(fs.readFileSync(prodConfig))
 ;
 
 module.exports = function (options, cb) {
@@ -36,3 +38,7 @@ module.exports = function (options, cb) {
     child.on('exit', function () { end(error); });
   });
 };
+
+module.exports.development = dev;
+module.exports.production = prod;
+module.exports.configuration = (process.env.NODE_ENV === 'production') ? prod : dev;
